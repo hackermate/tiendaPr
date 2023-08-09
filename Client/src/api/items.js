@@ -5,7 +5,9 @@ const apiItems = axios.create({
   mode: "cors"
 })
 
-export const getItems = async () => {
+export const getItem = async () => {
   const res = await apiItems.get('/')
   return res.data;
 }
+
+export const createOrder =(order)=> apiItems.post('/', item)

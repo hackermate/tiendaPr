@@ -6,6 +6,7 @@ const Items = () => {
     queryKey: ['items'],
     queryFn: getItems
   })
+  
   if(isLoading) return <div>Loading ...</div>
   else if(isError) return <div>Error: {error.message}</div>
 

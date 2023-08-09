@@ -4,7 +4,7 @@ const apiOrders = axios.create({
   baseURL: 'http://localhost:3001/ordenes',
 })
 
-export const getOrders = async () => {
+export const getOrder = async () => {
   const res = await apiOrders.get('/')
   return res.data;
 }
@@ -12,5 +12,3 @@ export const getOrders = async () => {
 export const createOrder =(order)=> apiOrders.post('/', order)
 
 export const deleteOrder = (id) => apiOrders.delete(`/${id}`)
-
-export const detalleOrder = (id) => apiOrders.get(`/${id}`)
